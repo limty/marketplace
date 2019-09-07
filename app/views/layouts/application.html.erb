@@ -5,11 +5,20 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
+  <% if flash %>
+    <% puts "flash message present"%>
+    <% puts flash%>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-warning mb-0"><button type="button" class="close" data-dismiss="alert">&times;</button><%= value %></div>
+      <% end %>
+      <% end %>
+
     <%= yield %>
   </body>
 </html>

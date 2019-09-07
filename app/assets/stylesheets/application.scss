@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ //@import "bootstrap";
+
+ @import "bulma";
+body {
+    padding: 0;
+}
