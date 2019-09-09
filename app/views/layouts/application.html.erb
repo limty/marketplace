@@ -61,6 +61,12 @@
     </div>
   </nav>
 
-  <%= yield %>
+  <%= yield(:header) %>
+
+  <div class="container">
+
+    <%= yield %>
+
+  </div>
   </body>
 </html>
