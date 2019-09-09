@@ -1,34 +1,74 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @item.brand %>
-</p>
+<section class="section item-show">
+  <div class="columns">
+    <div class="column is-8">
+      <h1 class="title is-2"><%= @item.title %></h1>
 
-<p>
-  <strong>Model:</strong>
-  <%= @item.model %>
-</p>
+      <ul class="pv1">
+        <% if @item.brand? %>
+        <li class="inline-block pr3"><%= @item.brand %></li>
+        <% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
+        <li class="inline-block pr3"><%= @item.model %></li>
 
-<p>
-  <strong>Condition:</strong>
-  <%= @item.condition %>
-</p>
+        <% if @item.condition? %>
+        <li class="inline-block pr3"><%= @item.condition %></li>
+        <% end %>
+      </ul>
 
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
+      <div class="feature-image">
 
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
+
+
+
+
+
+      </div>
+
+      <div class="content pa4 mt3 bg-white border-radius-3">
+
+      <h3 class="subtitle is-4">Description</h3>
+      <%= @item.description %>
+
+
+      <h3 class="subtitle is-4 pt5">Product Specs</h3>
+
+      <table class="table is-narrow">
+        <% if @item.condition %>
+        <tr>
+          <td class="has-text-weight-bold">Condition:</td>
+          <td><%= @item.condition %></td>
+        </tr>
+        <% end %>
+
+        <% if @item.brand %>
+          <tr>
+            <td class="has-text-weight-bold">Brand:</td>
+            <td><%= @item.brand %></td>
+          </tr>
+        <% end %>
+
+        <tr>
+          <td class="has-text-weight-bold">Model:</td>
+          <td><%= @item.model %></td>
+        </tr>
+      </table>
+    </div>
+    </div>
+    <div class="column is-3 is-offset-1">
+      <div class="bg-white pa4 border-radius-3">
+        <h4 class="title is-5 has-text-centered"><%= number_to_currency(@item.price) %></h4>
+        <p class="has-text-centered mb4">Sold by <%= @item.user.name %></p>
+        <%= button_to 'Add to cart', '#', class: 'button is-warning add-to-cart' %>
+      </div>
+    </div>
+  </div>
+
+  <% if item_author(@item) %>
+    <%= link_to 'Edit', edit_item_path(@item), class: 'button' %>
+  <% end %>
+</section>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
