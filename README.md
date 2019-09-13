@@ -8,7 +8,7 @@ Rails, React JS, webpacker, Ruby, PostgreSQL.
 ```bash
 bundle install
 ```
-Then,
+Then
 ```bash
 rake db:create
 ```
@@ -19,7 +19,9 @@ rake db:migrate
 
 ## Unsolved problems/Challenges
 Displaying of images: Cloudinary not working yet.
+
 Cart: not working yet.
+
 Checkout: not working yet.
 
 ## Acknoledgements
