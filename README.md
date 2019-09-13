@@ -25,8 +25,5 @@ Cart: not working yet.
 Checkout: not working yet.
 
 ## Acknoledgements
-Andy Leverenz
-
-Let’s Build: With Ruby on Rails – eCommerce Music Shop
-
+Andy Leverenz - Let’s Build: With Ruby on Rails – eCommerce Music Shop - 
 https://web-crunch.com/ruby-on-rails-ecommerce-music-shop/
