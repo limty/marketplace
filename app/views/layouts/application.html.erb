@@ -1,72 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LTYmarket</title>
+    <title>Marketplace</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <% if flash %>
-    <% puts "flash message present"%>
-    <% puts flash%>
-      <% flash.each do |key, value| %>
-        <div class="alert alert-warning mb-0"><button type="button" class="close" data-dismiss="alert">&times;</button><%= value %></div>
-      <% end %>
-  <% end %>
-
-  <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <%= link_to root_path, class:"navbar-item" do %>
-          <h1 class="title is-5">Yew Market</h1>
-        <% end  %>
-      <div class="navbar-burger burger" data-target="navbar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-      <div id="navbar" class="navbar-menu">
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="field is-grouped">
-
-
-
-            <% if user_signed_in? %>
-              <%= link_to 'Sell', '#', class: "navbar-item button is-dark" %>
-
-              <div class="navbar-item has-dropdown is-hoverable">
-                <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
-                <div class="navbar-dropdown is-right">
-                  <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
-                </div>
-              </div>
-            <% else %>
-
-            <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-warning" %>
-            <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-warning"%>
-
-            <% end %>
-
-            </div>
-          </div>
-        </div>
-    </div>
-  </nav>
-
-  <%= yield(:header) %>
-
-  <div class="container">
-
     <%= yield %>
-
-  </div>
   </body>
 </html>

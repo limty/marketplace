@@ -1,29 +1,24 @@
-# The Marketplace
-An App to buy or sell anything, in any condition.
+# README
 
-## Technologies used
-Rails, React JS, webpacker, Ruby, PostgreSQL.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Installation instructions
-```bash
-bundle install
-```
-Then
-```bash
-rake db:create
-```
-and
-```bash
-rake db:migrate
-```
+Things you may want to cover:
 
-## Unsolved problems/Challenges
-Displaying of images: Cloudinary not working yet.
+* Ruby version
 
-Cart: not working yet.
+* System dependencies
 
-Checkout: not working yet.
+* Configuration
 
-## Acknoledgements
-Andy Leverenz - Let’s Build: With Ruby on Rails – eCommerce Music Shop - 
-https://web-crunch.com/ruby-on-rails-ecommerce-music-shop/
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
