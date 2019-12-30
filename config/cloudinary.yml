@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dzsgpaz4f
+  api_key: '372556976939243'
+  api_secret: AbgpdC_XQKK_PQEUVRbCACI3CoU
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dzsgpaz4f
+  api_key: '372556976939243'
+  api_secret: AbgpdC_XQKK_PQEUVRbCACI3CoU
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dzsgpaz4f
+  api_key: '372556976939243'
+  api_secret: AbgpdC_XQKK_PQEUVRbCACI3CoU
+  enhance_image_tag: true
+  static_file_support: false

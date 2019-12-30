@@ -35,8 +35,11 @@ gem 'spree_gateway', '~> 3.6'
 #webpacker react-rails
 gem "react-rails"
 
-gem 'sprockets-helpers', '~> 1.2.1'
+#gem 'sprockets-helpers', '~> 1.2.1'
 #gem 'vinsol_spree_themes', github: 'vinsol-spree-contrib/spree_themes', branch: 'master'
+
+#gem 'spree_cloudinary', github: 'madhu314/spree_cloudinary'
+gem 'cloudinary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
